@@ -1,0 +1,112 @@
+V "GNAT Lib v12"
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FIXED_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+
+U plan%b		plan.adb		0b3e77a9 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z interfaces%s		interfac.ads		interfac.ali
+Z system.arith_64%s	s-arit64.adb		s-arit64.ali
+
+U plan%s		plan.ads		5c58fbc0 EE NE OO PK
+
+D ada.ads		20230508121439 76789da1 ada%s
+D a-except.ads		20230508121439 2a7d8d70 ada.exceptions%s
+D a-numeri.ads		20230508121439 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20230508121439 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20230508121439 511b9bab ada.numerics.big_numbers.big_integers_ghost%s
+D a-reatim.ads		20230508121439 0240fc73 ada.real_time%s
+D a-unccon.ads		20230508121439 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230508121439 edec285f interfaces%s
+D i-c.ads		20230508121439 2284bf7c interfaces.c%s
+D plan.ads		20250426131126 5c58fbc0 plan%s
+D plan.adb		20250423064948 5526701a plan%b
+D system.ads		20230508121439 a2da961d system%s
+D s-atacco.ads		20230508121439 4c36d12f system.address_to_access_conversions%s
+D s-arit64.ads		20230508121439 90488c35 system.arith_64%s
+D s-exctab.ads		20230508121439 91bef6ef system.exception_table%s
+D s-linux.ads		20230508121439 34850a8c system.linux%s
+D s-multip.ads		20230508121439 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20240403122733 89271e13 system.os_constants%s
+D s-osinte.ads		20230508121439 e4f53740 system.os_interface%s
+D s-parame.ads		20230508121439 d494a4a6 system.parameters%s
+D s-secsta.ads		20230508121439 62cd9202 system.secondary_stack%s
+D s-soflin.ads		20230508121439 df77073e system.soft_links%s
+D s-stache.ads		20230508121439 0b81c1fe system.stack_checking%s
+D s-stausa.ads		20230508121439 5be75682 system.stack_usage%s
+D s-stalib.ads		20230508121439 1c9580f6 system.standard_library%s
+D s-stoele.ads		20230508121439 6d8e1ff4 system.storage_elements%s
+D s-tasinf.ads		20230508121439 528dde74 system.task_info%s
+D s-taspri.ads		20230508121439 4ec891e7 system.task_primitives%s
+D s-taprop.ads		20230508121439 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20230508121439 0ec7ab0b system.tasking%s
+D s-traent.ads		20230508121439 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20230508121439 fa2a7f59 system.unsigned_types%s
+G a e
+G c Z s b [medir plan 8 14 none]
+G c Z s b [planificar plan 22 14 none]
+G c Z s s [array_ref_procedimiento_tIP plan 5 9 none]
+G c Z s s [array_tiempos_tIP plan 6 9 none]
+G c Z s s [reg_planificacion_tIP plan 10 9 none]
+G c Z s s [array_reg_planificacion_tIP plan 20 9 none]
+G c Z b b [swap plan 19 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 2r6
+X 6 a-reatim.ads
+39K13*Real_Time 185e18 11|1w10 2r10
+49O9*Time<duration> 11|8r16
+54O9*Time_Span<duration>
+61V13*Clock{49O9} 11|11s16 13s16
+71V14*"-"{54O9} 11|14s47
+110V13*To_Duration{duration} 11|14s32
+X 8 interfac.ads
+55I9*Integer_64<long_long_integer>
+X 10 plan.ads
+1K9*Plan 24l5 24e9 11|4b14 65l5 65t9
+3P9*ref_Procedimiento_t 5r67
+5A9*array_ref_Procedimiento_t(3P9)<integer> 8r37 11|7r37
+6A9*array_Tiempos_t(natural)<integer> 8r77 11|7r77
+8U14*Medir 8>21 8<64 11|7b14 16l8 16t13
+8a21 Procedimientos{5A9} 11|7b21 10r16 12r10
+8a64 Tiempos{6A9} 11|7b64 14m10
+10R9*reg_Planificacion_t 18e14 20r67 11|19r32 20r13
+11i13*Nombre{positive}
+12i18*T{natural} 11|55r56 55r75
+13i18*D{natural} 11|34r26 34r40 57r66 60r58
+14i18*C{natural} 11|50r32 53r35 55r90
+15i18*P{positive} 11|42m20
+16i18*R{natural} 11|59m23
+17b7*Planificable{boolean} 11|60m23
+20A9*array_reg_Planificacion_t(10R9)<integer> 22r41 11|28r41
+22U14*Planificar 22=26 11|28b14 63l8 63t18
+22a26 Tareas{20A9} 11|28b26 29r31 32r16 32r32 33r28 34r16 34r30 35m21 35r21
+. 35m32 35r32 41r16 42m10 46r16 50r22 53r25 54r25 55r46 55r65 55r80 57r56
+. 59m13 60m13 60r48
+X 11 plan.adb
+8o7 T1{6|49O9} 11m10 14r49
+8o11 T2{6|49O9} 13m10 14r44
+10i11 I{integer} 12r25 14r18
+19U14 Swap 19b14 19=19 19=22 25l8 25t12 35s16
+19r19 I{10|10R9} 22r15 23m7
+19r22 J{10|10R9} 23r12 24m7
+20r7 Temp{10|10R9} 22m7 24r12
+29i7 N{integer}
+32i11 I{integer} 33r19 34r37 35r28
+33i14 J{integer} 34r23 35r39
+41i11 I{integer} 42r17 42r25
+46i11 I{integer} 50r29 53r32 54r41 57r63 59r20 60r20 60r55
+48i13 R_ant{natural} 52m16 55r38 57r34
+48i20 R_act{natural} 50m13 52r25 53m16 55m19 55r28 57r26 57r48 59r28 60r39
+54i20 J{integer} 55r53 55r72 55r87
+X 14 s-arit64.ads
+59I12*Int64{8|55I9}
+92V13*Multiply_With_Ovflo_Check64{59I12} 96i<c,__gnat_mulv64>22
+X 24 s-stausa.ads
+207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
+272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
+

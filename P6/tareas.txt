@@ -1,0 +1,79 @@
+🔹 Parte 1: Medida de tiempos de cómputo
+
+📌 Tarea pedida:
+
+    Implementar un paquete Proc con procedimientos P1, P2, P3, P4 que simulen tiempos de ejecución mediante espera activa.
+
+    Crear un procedimiento Medir en el paquete Plan que calcule los tiempos de ejecución reales de los procedimientos anteriores.
+
+🛠️ Cómo se resolvió:
+
+    Se definieron en proc.adb los procedimientos P1 a P4 usando un bucle con Clock y Milliseconds(...).
+
+    Se implementó el procedimiento Medir en plan.adb, midiendo tiempo con Clock, calculando la duración en milisegundos y almacenándola en un array.
+
+🔹 Parte 2: Planificación
+
+📌 Tarea pedida:
+
+    Implementar el procedimiento Planificar en el paquete Plan, que:
+
+        Asigna prioridades usando Deadline Monotonic Scheduling (DMS).
+
+        Calcula el tiempo de respuesta RiRi​ de cada tarea.
+
+        Determina si la tarea es planificable según Ri≤DiRi​≤Di​.
+
+    Probar el procedimiento Planificar con un programa prueba.adb.
+
+    Crear otro programa medir.adb que combine Medir y Planificar.
+
+🛠️ Cómo se resolvió:
+
+    En plan.adb se implementó Planificar:
+
+        Se ordenan las tareas por plazo (D), asignando prioridad creciente.
+
+        Se calculan los tiempos de respuesta mediante iteración (respuesta = cómputo + interferencias).
+
+        Se establece Planificable := R <= D.
+
+    Se probó con prueba.adb, que imprime una tabla con resultados.
+
+    Se creó medir.adb, que:
+
+        Mide automáticamente los cómputos de P1 a P4.
+
+        Los asigna a las tareas.
+
+        Ejecuta Planificar y muestra la tabla final.
+
+🔹 Parte 3: Simulación
+
+📌 Tarea pedida:
+
+    Simular durante 50 segundos la ejecución de tareas periódicas con los tiempos obtenidos.
+
+    Cada tarea debe:
+
+        Ejecutarse con la periodicidad asignada.
+
+        Tener su prioridad con pragma Priority.
+
+        Medir si finaliza antes del siguiente período (cumple su plazo).
+
+        Mostrar un mensaje si cumple o no cumple su deadline.
+
+🛠️ Cómo se resolvió:
+
+    Se creó simulacion.adb:
+
+        Define un task type para las tareas.
+
+        Usa delay until para sincronización periódica.
+
+        Ejecuta la tarea simulando su cómputo con Proc.Px.
+
+        Mide el tiempo de ejecución y evalúa si cumple su deadline.
+
+        Usa pragma Priority según el orden de prioridades.
